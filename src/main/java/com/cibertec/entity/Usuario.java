@@ -44,4 +44,8 @@ public class Usuario {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "IdEmpleado")
 	private Empleado empleado;
+	
+	public String getNombreCompleto() {
+		return NomEmpleado.concat(" ").concat(ApeEmpleado);
+	}
 }
